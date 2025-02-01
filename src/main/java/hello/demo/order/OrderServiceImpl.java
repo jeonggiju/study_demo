@@ -9,18 +9,18 @@ import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
 @Component
-//@RequiredArgsConstructor
+@RequiredArgsConstructor
 public class OrderServiceImpl implements OrderService {
 
     private final MemberRepository memberRepository;
     private final DiscountPolicy discountPolicy;
 
-    @Autowired// <- 생략가능
-    public OrderServiceImpl(MemberRepository memberRepository,
-                            @Qualifier("mainDiscountPolicy") DiscountPolicy discountPolicy) {
-        this.memberRepository = memberRepository;
-        this.discountPolicy = discountPolicy;
-    }
+//    @Autowired// <- 생략가능
+//    public OrderServiceImpl(MemberRepository memberRepository,
+//                            @Qualifier("mainDiscountPolicy") DiscountPolicy discountPolicy) {
+//        this.memberRepository = memberRepository;
+//        this.discountPolicy = discountPolicy;
+//    }
 
 //    @Autowired
 //    public void setMemberRepository(MemberRepository memberRepository) {
